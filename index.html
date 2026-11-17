@@ -7,6 +7,15 @@
 <title>Mercer Motor Company — Buy Here Pay Here in Seguin, TX (concept preview)</title>
 <meta name="description" content="Concept preview of a buy here pay here landing page for Mercer Motor Company in Seguin, TX.">
 <link rel="icon" href="assets/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://retrovisiontech.github.io/mercer-motor-co/">
+<meta property="og:title" content="Mercer Motor Co. — Your job is your credit">
+<meta property="og:description" content="Buy here, pay here in Seguin, TX. Landing page concept — tap to try the 60-second pre-qualify form.">
+<meta property="og:image" content="https://retrovisiontech.github.io/mercer-motor-co/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#02184A">
 <style>
   :root {
     --navy: #02184A;
@@ -112,8 +121,8 @@
   .buckets { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-bottom: 32px; }
   .bucket { display: flex; flex-direction: column; gap: 4px; padding: 22px 24px; border-radius: 14px; background: var(--navy); color: #fff; text-decoration: none; }
   .bucket:hover { background: var(--royal); color: #fff; }
-  .bucket b { font-weight: 900; font-size: 28px; }
-  .bucket span { font-size: 15px; color: var(--sky-light); }
+  .bucket .b-title { font-weight: 900; font-size: 28px; }
+  .bucket .b-sub { font-size: 15px; color: var(--sky-light); }
   .cars { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
   .car { border: 1px solid var(--line); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; background: #fff; }
   .car img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
@@ -152,10 +161,60 @@
   footer.site a { color: #fff; }
   footer.site p { margin: 0; }
 
+  .sm { display: none; }
+  .swipe { margin: 0; font-size: 14px; font-weight: 700; color: var(--royal); }
+  a[href^="tel:"] { white-space: nowrap; }
+
   /* mobile action bar */
   .mbar { display: none; }
   @media (max-width: 720px) {
     header.site nav { display: none; }
+    .lg { display: none; }
+    .sm { display: inline; }
+    .swipe.sm { display: block; }
+    .hide-sm { display: none !important; }
+
+    /* hero: form right under the headline */
+    .hero .wrap { flex-direction: column; flex-wrap: nowrap; align-items: stretch; gap: 16px; padding-top: 24px; padding-bottom: 32px; }
+    .hero-copy { display: contents; }
+    .hero .pill { order: 1; font-size: 12px; }
+    .hero h1 { order: 2; font-size: 40px; }
+    .hero p.lead { order: 3; }
+    .hero .trust { order: 4; padding-top: 0; border-top: 0; font-size: 14px; gap: 6px 16px; }
+    .apply { order: 5; max-width: none; flex: none; }
+    .hero .checks { order: 6; margin-top: 8px; }
+    .card h2 { font-size: 23px; margin-bottom: 12px; }
+    .opt { min-height: 54px; padding: 12px 16px; font-size: 16px; }
+    .stepper { font-size: 13px; }
+    .fine { margin-top: 12px; }
+
+    /* how it works: compact rows */
+    .grid3 { gap: 12px; }
+    .step-card { display: grid; grid-template-columns: 40px 1fr; column-gap: 14px; row-gap: 4px; padding: 18px; }
+    .step-card .num { grid-row: span 2; width: 40px; height: 40px; font-size: 17px; border-width: 2px; }
+    .step-card h3 { font-size: 18px; }
+    .step-card p { font-size: 15px; }
+
+    /* down-payment buckets: one row */
+    .buckets { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-bottom: 20px; }
+    .bucket { padding: 14px 8px; text-align: center; border-radius: 12px; }
+    .bucket .b-title { font-size: 18px; }
+    .bucket .b-sub { font-size: 12px; }
+
+    /* cars + reviews: swipe sideways */
+    .cars, .quotes { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 14px; margin: 0 -24px; padding: 0 24px 8px; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+    .cars::-webkit-scrollbar, .quotes::-webkit-scrollbar { display: none; }
+    .car { flex: 0 0 82%; scroll-snap-align: center; }
+    figure.q { flex: 0 0 82%; scroll-snap-align: center; padding: 20px; }
+    figure.q blockquote { font-size: 17px; }
+    .sec-head { margin-bottom: 20px; }
+    .reviews { gap: 16px; }
+    .score .big { font-size: 56px; }
+
+    /* payments: three across */
+    .ways { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+    .ways div { padding: 12px; font-size: 14px; }
+    .visit-photo { min-height: 240px; }
     header.site .wrap { justify-content: center; }
     .topbar .hide-sm { display: none; }
     .topbar .wrap { justify-content: center; }
@@ -163,7 +222,7 @@
     .hero .wrap { padding-top: 32px; padding-bottom: 48px; gap: 28px; }
     .hero p.lead { font-size: 17px; }
     .card { padding: 20px; }
-    .pad { padding-top: 56px; padding-bottom: 56px; }
+    .pad { padding-top: 48px; padding-bottom: 48px; }
     .panel { padding: 24px; }
     .panel h2 { font-size: 30px; }
     .mbar { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; padding: 10px 12px calc(12px + env(safe-area-inset-bottom)); background: #fff; border-top: 1px solid var(--line); box-shadow: 0 -6px 20px rgba(2,24,74,0.12); }
@@ -183,7 +242,7 @@
     <span style="display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center">
       <span class="hide-sm">1224 E Kingsbury St</span>
       <a href="tel:+18304915216">(830) 491-5216</a>
-      <span><a href="#top">English</a> · <a href="#top" class="es">Español</a></span>
+      <span class="hide-sm"><a href="#top">English</a> · <a href="#top" class="es">Español</a></span>
     </span>
   </div>
 </div>
@@ -208,7 +267,7 @@
     <div class="hero-copy">
       <span class="pill">Buy here · Pay here · Seguin, TX</span>
       <h1>Your job is <span class="grad">your credit.</span></h1>
-      <p class="lead">Bad credit, no credit, or starting over — we finance in-house, so the yes comes from us, not a bank. Answer 4 quick questions. We make it easy.</p>
+      <p class="lead"><span class="lg">Bad credit, no credit, or starting over — we finance in-house, so the yes comes from us, not a bank. Answer 4 quick questions. We make it easy.</span><span class="sm">Bad credit or no credit — the yes comes from us, not a bank.</span></p>
       <ul class="checks">
         <li><span class="dot"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#02184A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Quick decision — no obligation to buy</li>
         <li><span class="dot"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#02184A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Payments set to match your payday</li>
@@ -287,13 +346,14 @@
         <p class="eyebrow">On the lot now</p>
         <h2 class="h2">Shop by down payment</h2>
         <p class="lead">Start with what you can put down. We'll show you what fits.</p>
+        <p class="swipe sm">Swipe to see more →</p>
       </div>
       <a href="https://www.mercermotorco.com/cars/" style="font-weight: 700; font-size: 16px; min-height: 44px; display: inline-flex; align-items: center">See all 23 vehicles →</a>
     </div>
     <div class="buckets">
-      <a class="bucket" href="#apply"><b>Under $1,000</b><span>down payment · [#] vehicles →</span></a>
-      <a class="bucket" href="#apply"><b>$1,000 – $2,000</b><span>down payment · [#] vehicles →</span></a>
-      <a class="bucket" href="#apply"><b>$2,000 and up</b><span>down payment · [#] vehicles →</span></a>
+      <a class="bucket" href="#apply"><span class="b-title"><span class="lg">Under $1,000</span><span class="sm">Under $1K</span></span><span class="b-sub"><span class="lg">down payment · [#] vehicles →</span><span class="sm">down · [#] cars</span></span></a>
+      <a class="bucket" href="#apply"><span class="b-title"><span class="lg">$1,000 – $2,000</span><span class="sm">$1K–$2K</span></span><span class="b-sub"><span class="lg">down payment · [#] vehicles →</span><span class="sm">down · [#] cars</span></span></a>
+      <a class="bucket" href="#apply"><span class="b-title"><span class="lg">$2,000 and up</span><span class="sm">$2K+</span></span><span class="b-sub"><span class="lg">down payment · [#] vehicles →</span><span class="sm">down · [#] cars</span></span></a>
     </div>
     <div class="cars">
       <article class="car"><img src="assets/civic.jpg" alt="2017 Honda Civic LX" loading="lazy" width="800" height="600"><div class="body"><h3>2017 Honda Civic LX</h3><p class="miles">93,745 mi</p><div class="row"><span class="down">$[DOWN] down</span><span class="price">$15,950</span></div><a class="btn btn-outline" href="#apply">I want this one</a></div></article>
@@ -346,6 +406,7 @@
       <span style="font-size: 16px; color: var(--ink-soft)">111 reviews on Google</span>
       <a href="https://www.google.com/maps/search/?api=1&amp;query=Mercer+Motor+Company+Seguin+TX" style="font-weight: 700; font-size: 16px; min-height: 44px; display: inline-flex; align-items: center">Read all reviews →</a>
     </div>
+    <p class="swipe sm" style="margin: 0">Swipe for more reviews →</p>
     <div class="quotes">
       <figure class="q"><blockquote>"GREAT dealership!! Richie really cares about his customers!"</blockquote><figcaption>Heather M. · Google review</figcaption></figure>
       <figure class="q"><blockquote>"Richie was amazing! This is my second time using Mercer Motors."</blockquote><figcaption>Kasi H. · Google review</figcaption></figure>
