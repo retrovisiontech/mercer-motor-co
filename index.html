@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Mercer Motor Company — Buy Here Pay Here in Seguin, TX (concept preview)</title>
+<meta name="description" content="Concept preview of a buy here pay here landing page for Mercer Motor Company in Seguin, TX.">
+<link rel="icon" href="assets/logo.png">
+<style>
+  :root {
+    --navy: #02184A;
+    --royal: #003173;
+    --sky: #4A9EFF;
+    --sky-light: #A0CFFF;
+    --ink-soft: #4A5878;
+    --line: #E3E8F0;
+    --bg-soft: #F3F6FB;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; color: var(--navy); background: #fff; }
+  a { color: var(--royal); }
+  a:hover { color: var(--navy); }
+  img { max-width: 100%; }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+  .eyebrow { margin: 0; color: var(--royal); font-weight: 800; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; }
+  .eyebrow.on-dark { color: var(--sky-light); }
+  h1, h2, h3 { margin: 0; }
+  .h2 { font-weight: 900; font-size: clamp(32px, 4vw, 44px); line-height: 1.05; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 12px 22px; border-radius: 12px; font-weight: 700; font-size: 16px; text-decoration: none; border: 2px solid transparent; cursor: pointer; font-family: inherit; }
+  .btn-navy { background: var(--navy); color: #fff; }
+  .btn-navy:hover { background: var(--royal); color: #fff; }
+  .btn-sky { background: var(--sky); color: var(--navy); font-weight: 800; }
+  .btn-sky:hover { background: var(--sky-light); color: var(--navy); }
+  .btn-outline { border-color: var(--navy); color: var(--navy); background: #fff; }
+  section { scroll-margin-top: 16px; }
+
+  /* concept strip */
+  .concept { background: #0B0F1A; color: #C3D0E6; font-size: 12px; text-align: center; padding: 6px 12px; }
+
+  /* top bar */
+  .topbar { background: var(--navy); color: #fff; font-size: 13px; }
+  .topbar .wrap { padding-top: 8px; padding-bottom: 8px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 20px; }
+  .topbar a { color: #fff; text-decoration: none; font-weight: 700; }
+  .topbar .es { color: var(--sky-light); font-weight: 400; }
+
+  /* header */
+  header.site { background: #fff; border-bottom: 1px solid var(--line); }
+  header.site .wrap { padding-top: 12px; padding-bottom: 12px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; }
+  header.site .logo img { display: block; height: 56px; width: auto; }
+  header.site nav { display: flex; flex-wrap: wrap; gap: 22px; align-items: center; }
+  header.site nav a.link { color: var(--navy); text-decoration: none; font-weight: 600; font-size: 15px; }
+
+  /* hero */
+  .hero { position: relative; overflow: hidden; background: var(--navy); color: #fff; }
+  .hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 60%; }
+  .hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(2,24,74,0.97) 0%, rgba(2,24,74,0.9) 50%, rgba(2,24,74,0.6) 100%); z-index: 1; }
+  .hero .wrap { position: relative; z-index: 2; padding-top: 64px; padding-bottom: 80px; display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start; }
+  .hero-copy { flex: 1 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 24px; }
+  .pill { align-self: flex-start; padding: 7px 14px; border-radius: 999px; background: rgba(160,207,255,0.16); color: var(--sky-light); font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; }
+  .hero h1 { font-weight: 900; font-size: clamp(42px, 5.4vw, 72px); line-height: 1.0; letter-spacing: -0.02em; }
+  .grad { background: linear-gradient(90deg, var(--sky), var(--sky-light)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .hero p.lead { margin: 0; font-size: 20px; line-height: 1.55; color: #DCE6F5; max-width: 540px; }
+  .checks { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 14px; }
+  .checks li { display: flex; align-items: center; gap: 12px; font-size: 17px; color: #F1F5FB; font-weight: 500; }
+  .dot { width: 28px; height: 28px; border-radius: 999px; background: var(--sky); display: flex; align-items: center; justify-content: center; flex: none; }
+  .trust { display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: center; padding-top: 16px; border-top: 1px solid rgba(160,207,255,0.25); font-size: 15px; color: #DCE6F5; }
+  .trust strong { color: #fff; }
+  .trust span { display: inline-flex; align-items: center; gap: 8px; }
+
+  /* form card */
+  .apply { flex: 1 1 400px; max-width: 480px; min-width: 0; }
+  .card { background: #fff; color: var(--navy); border-radius: 18px; padding: 28px; box-shadow: 0 24px 60px rgba(0,0,0,0.4); }
+  .stepper { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-size: 14px; }
+  .stepper b { color: #33415C; }
+  .stepper span { color: var(--ink-soft); }
+  .bar { height: 8px; background: var(--line); border-radius: 999px; overflow: hidden; margin-bottom: 22px; }
+  .bar > div { height: 8px; background: var(--navy); border-radius: 999px; width: 20%; transition: width 0.25s ease; }
+  .card h2 { font-size: 27px; font-weight: 800; line-height: 1.15; margin-bottom: 16px; }
+  .opts { display: flex; flex-direction: column; gap: 10px; }
+  .opt { min-height: 58px; width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 18px; border: 2px solid #CBD5E4; border-radius: 12px; background: #fff; font: 600 17px "Helvetica Neue", Helvetica, Arial, sans-serif; color: var(--navy); cursor: pointer; text-align: left; }
+  .opt:hover, .opt:focus-visible { border-color: var(--sky); background: #EEF6FF; outline: none; }
+  .opt.selected { border-color: var(--sky); background: #EEF6FF; }
+  .link-btn { margin-top: 10px; min-height: 44px; padding: 10px 0; background: none; border: none; color: #33415C; font: 600 15px "Helvetica Neue", Helvetica, Arial, sans-serif; cursor: pointer; }
+  .field { display: flex; flex-direction: column; gap: 6px; }
+  .field label { font-weight: 600; font-size: 15px; }
+  .field input { min-height: 52px; padding: 12px 14px; border: 2px solid #CBD5E4; border-radius: 10px; font: 17px "Helvetica Neue", Helvetica, Arial, sans-serif; color: var(--navy); }
+  .field input:focus { border-color: var(--sky); outline: none; }
+  .consent { display: flex; gap: 10px; align-items: flex-start; font-size: 13px; line-height: 1.45; color: var(--ink-soft); }
+  .consent input { width: 20px; height: 20px; margin-top: 1px; flex: none; }
+  .sub { margin: 0 0 18px; font-size: 16px; color: var(--ink-soft); line-height: 1.5; }
+  .summary { display: flex; flex-direction: column; gap: 8px; padding: 16px; background: var(--bg-soft); border-radius: 12px; font-size: 15px; }
+  .summary div { display: flex; justify-content: space-between; gap: 12px; }
+  .summary span { color: var(--ink-soft); }
+  .summary strong { text-align: right; }
+  .fine { margin: 18px 0 0; font-size: 13px; color: var(--ink-soft); text-align: center; }
+  .hidden { display: none !important; }
+  .err { color: #B42318; font-size: 14px; font-weight: 600; }
+
+  /* sections */
+  .soft { background: var(--bg-soft); }
+  .pad { padding-top: 88px; padding-bottom: 88px; }
+  .grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+  .step-card { background: #fff; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 12px; border: 1px solid var(--line); }
+  .num { width: 48px; height: 48px; border-radius: 999px; background: var(--navy); border: 3px solid var(--sky-light); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 20px; }
+  .step-card h3 { font-size: 22px; font-weight: 800; }
+  .step-card p { margin: 0; font-size: 16px; line-height: 1.55; color: var(--ink-soft); }
+  .sec-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: 32px; }
+  .sec-head > div { display: flex; flex-direction: column; gap: 10px; max-width: 640px; }
+  .sec-head p.lead { margin: 0; font-size: 18px; line-height: 1.55; color: var(--ink-soft); }
+  .buckets { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-bottom: 32px; }
+  .bucket { display: flex; flex-direction: column; gap: 4px; padding: 22px 24px; border-radius: 14px; background: var(--navy); color: #fff; text-decoration: none; }
+  .bucket:hover { background: var(--royal); color: #fff; }
+  .bucket b { font-weight: 900; font-size: 28px; }
+  .bucket span { font-size: 15px; color: var(--sky-light); }
+  .cars { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+  .car { border: 1px solid var(--line); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; background: #fff; }
+  .car img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+  .car .body { padding: 18px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+  .car h3 { font-size: 19px; font-weight: 800; }
+  .car .miles { margin: 0; font-size: 14px; color: var(--ink-soft); }
+  .car .row { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+  .car .down { font-weight: 900; font-size: 22px; color: var(--royal); }
+  .car .price { font-size: 14px; color: var(--ink-soft); }
+  .car .btn { margin-top: auto; }
+  .dark { background: var(--navy); color: #fff; }
+  .two { display: flex; flex-wrap: wrap; gap: 32px; }
+  .panel { flex: 1 1 440px; min-width: 0; background: var(--royal); border-radius: 18px; padding: 36px; display: flex; flex-direction: column; gap: 18px; }
+  .panel h2 { font-weight: 900; font-size: 38px; line-height: 1.05; }
+  .panel ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 14px; font-size: 17px; color: #F1F5FB; }
+  .panel li { display: flex; gap: 12px; align-items: center; }
+  .panel p { margin: 0; font-size: 16px; line-height: 1.55; color: #DCE6F5; }
+  .ways { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 12px; }
+  .ways div { background: var(--navy); border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 8px; font-weight: 700; }
+  .reviews { display: flex; flex-wrap: wrap; gap: 32px; align-items: stretch; }
+  .score { flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 10px; justify-content: center; }
+  .score .big { font-weight: 900; font-size: 80px; line-height: 1; }
+  .stars { display: flex; gap: 4px; }
+  .quotes { flex: 3 1 640px; min-width: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+  figure.q { margin: 0; background: #fff; border-radius: 16px; padding: 26px; border: 1px solid var(--line); display: flex; flex-direction: column; gap: 16px; }
+  figure.q blockquote { margin: 0; font-size: 19px; line-height: 1.45; font-weight: 600; }
+  figure.q figcaption { font-size: 14px; color: var(--ink-soft); }
+  .visit-info { flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 20px; }
+  .visit-info .lines { display: flex; flex-direction: column; gap: 14px; font-size: 17px; }
+  .visit-info .lines div { display: flex; gap: 12px; align-items: flex-start; }
+  .visit-photo { flex: 1 1 480px; min-width: 0; min-height: 360px; border-radius: 18px; overflow: hidden; position: relative; background: var(--line); }
+  .visit-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
+  footer.site { background: var(--navy); color: #C3D0E6; }
+  footer.site .wrap { padding-top: 40px; padding-bottom: 40px; display: flex; flex-direction: column; gap: 16px; font-size: 14px; line-height: 1.6; }
+  footer.site .top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; align-items: center; }
+  footer.site a { color: #fff; }
+  footer.site p { margin: 0; }
+
+  /* mobile action bar */
+  .mbar { display: none; }
+  @media (max-width: 720px) {
+    header.site nav { display: none; }
+    header.site .wrap { justify-content: center; }
+    .topbar .hide-sm { display: none; }
+    .topbar .wrap { justify-content: center; }
+    header.site .logo img { height: 44px; }
+    .hero .wrap { padding-top: 32px; padding-bottom: 48px; gap: 28px; }
+    .hero p.lead { font-size: 17px; }
+    .card { padding: 20px; }
+    .pad { padding-top: 56px; padding-bottom: 56px; }
+    .panel { padding: 24px; }
+    .panel h2 { font-size: 30px; }
+    .mbar { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; padding: 10px 12px calc(12px + env(safe-area-inset-bottom)); background: #fff; border-top: 1px solid var(--line); box-shadow: 0 -6px 20px rgba(2,24,74,0.12); }
+    .mbar a { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; min-height: 56px; border-radius: 12px; background: var(--navy); color: #fff; text-decoration: none; font-weight: 700; font-size: 14px; }
+    .mbar a.apply-btn { background: var(--sky); color: var(--navy); font-weight: 800; }
+    body { padding-bottom: 86px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="concept">Concept preview for Mercer Motor Company — not the official site. Demo form: nothing is sent.</div>
+
+<div class="topbar">
+  <div class="wrap">
+    <span class="hide-sm" style="font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase">Celebrating 10 years in Seguin</span>
+    <span style="display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center">
+      <span class="hide-sm">1224 E Kingsbury St</span>
+      <a href="tel:+18304915216">(830) 491-5216</a>
+      <span><a href="#top">English</a> · <a href="#top" class="es">Español</a></span>
+    </span>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="Mercer Motor Company home"><img src="assets/logo.png" alt="Mercer Motor Company — We make it easy!" width="227" height="56"></a>
+    <nav aria-label="Main">
+      <a class="link" href="#inventory">Inventory</a>
+      <a class="link" href="#how">How it works</a>
+      <a class="link" href="#bring">What to bring</a>
+      <a class="link" href="#pay">Make a payment</a>
+      <a class="btn btn-navy" href="#apply">Get pre-qualified</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="top">
+  <img src="assets/lot.jpg" alt="" fetchpriority="high">
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="pill">Buy here · Pay here · Seguin, TX</span>
+      <h1>Your job is <span class="grad">your credit.</span></h1>
+      <p class="lead">Bad credit, no credit, or starting over — we finance in-house, so the yes comes from us, not a bank. Answer 4 quick questions. We make it easy.</p>
+      <ul class="checks">
+        <li><span class="dot"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#02184A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Quick decision — no obligation to buy</li>
+        <li><span class="dot"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#02184A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Payments set to match your payday</li>
+        <li><span class="dot"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#02184A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Pay online, by phone, or in person</li>
+      </ul>
+      <div class="trust">
+        <span><svg width="20" height="20" viewBox="0 0 24 24" fill="#FBBC04" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><strong>4.6</strong> · 111 Google reviews</span>
+        <span><strong>10 years</strong> in Seguin</span>
+      </div>
+    </div>
+
+    <div class="apply" id="apply">
+      <div class="card" aria-live="polite">
+        <div id="stepperWrap">
+          <div class="stepper"><b>Step <span id="stepNum">1</span> of 5</b><span>About 60 seconds</span></div>
+          <div class="bar"><div id="barFill"></div></div>
+        </div>
+
+        <div id="qView">
+          <h2 id="qText">What do you need to drive?</h2>
+          <div class="opts" id="opts"></div>
+          <button type="button" class="link-btn hidden" id="backBtn">← Back</button>
+        </div>
+
+        <form id="contactView" class="hidden" novalidate>
+          <h2>Where should we text you?</h2>
+          <p class="sub">A real person will reach out to go over cars that fit your budget.</p>
+          <div style="display: flex; flex-direction: column; gap: 14px">
+            <div class="field"><label for="fname">First name</label><input id="fname" type="text" autocomplete="given-name" required></div>
+            <div class="field"><label for="mphone">Mobile number</label><input id="mphone" type="tel" autocomplete="tel" placeholder="(830) 000-0000" required></div>
+            <label class="consent"><input type="checkbox" id="consent" checked><span>OK for Mercer Motor Co. to call or text me about my request. Msg &amp; data rates may apply. Reply STOP to opt out.</span></label>
+            <p class="err hidden" id="formErr">Please add your first name and mobile number.</p>
+            <button type="submit" class="btn btn-navy" style="min-height: 58px; font-size: 18px">See my options</button>
+            <button type="button" class="link-btn" id="backBtn2" style="align-self: flex-start; margin-top: 0">← Back</button>
+          </div>
+        </form>
+
+        <div id="doneView" class="hidden">
+          <div style="display: flex; flex-direction: column; gap: 16px">
+            <span style="width: 56px; height: 56px; border-radius: 999px; background: #DCEBFF; display: flex; align-items: center; justify-content: center"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#003173" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+            <h2 style="margin: 0">You're all set<span id="doneName"></span>.</h2>
+            <p class="sub" style="margin: 0">Watch your phone — our team will reach out shortly with vehicles that fit what you told us.</p>
+            <div class="summary">
+              <div><span>Looking for</span><strong id="sNeed">—</strong></div>
+              <div><span>When</span><strong id="sTiming">—</strong></div>
+              <div><span>Down payment</span><strong id="sDown">—</strong></div>
+              <div><span>Signing</span><strong id="sWho">—</strong></div>
+            </div>
+            <a class="btn btn-navy" href="tel:+18304915216" style="min-height: 54px">Can't wait? Call (830) 491-5216</a>
+            <button type="button" class="link-btn" id="restartBtn" style="align-self: flex-start; margin-top: 0">Start over</button>
+          </div>
+        </div>
+
+        <p class="fine">No obligation to buy · Takes about a minute</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how" class="soft">
+  <div class="wrap pad">
+    <p class="eyebrow" style="margin-bottom: 10px">How it works</p>
+    <h2 class="h2" style="margin-bottom: 40px">Three steps to the keys</h2>
+    <div class="grid3">
+      <div class="step-card"><span class="num">1</span><h3>Answer 4 quick questions</h3><p>What you need, when you need it, your down payment, and who's signing. About a minute.</p></div>
+      <div class="step-card"><span class="num">2</span><h3>Talk to a real person</h3><p>We call or text you back fast. No runaround, no pressure, no obligation.</p></div>
+      <div class="step-card"><span class="num">3</span><h3>Pick your ride and drive</h3><p>Choose from vehicles that fit your down payment and your payday.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="inventory">
+  <div class="wrap pad">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">On the lot now</p>
+        <h2 class="h2">Shop by down payment</h2>
+        <p class="lead">Start with what you can put down. We'll show you what fits.</p>
+      </div>
+      <a href="https://www.mercermotorco.com/cars/" style="font-weight: 700; font-size: 16px; min-height: 44px; display: inline-flex; align-items: center">See all 23 vehicles →</a>
+    </div>
+    <div class="buckets">
+      <a class="bucket" href="#apply"><b>Under $1,000</b><span>down payment · [#] vehicles →</span></a>
+      <a class="bucket" href="#apply"><b>$1,000 – $2,000</b><span>down payment · [#] vehicles →</span></a>
+      <a class="bucket" href="#apply"><b>$2,000 and up</b><span>down payment · [#] vehicles →</span></a>
+    </div>
+    <div class="cars">
+      <article class="car"><img src="assets/civic.jpg" alt="2017 Honda Civic LX" loading="lazy" width="800" height="600"><div class="body"><h3>2017 Honda Civic LX</h3><p class="miles">93,745 mi</p><div class="row"><span class="down">$[DOWN] down</span><span class="price">$15,950</span></div><a class="btn btn-outline" href="#apply">I want this one</a></div></article>
+      <article class="car"><img src="assets/journey.jpg" alt="2015 Dodge Journey SXT" loading="lazy" width="800" height="600"><div class="body"><h3>2015 Dodge Journey SXT</h3><p class="miles">107,359 mi</p><div class="row"><span class="down">$[DOWN] down</span><span class="price">$10,950</span></div><a class="btn btn-outline" href="#apply">I want this one</a></div></article>
+      <article class="car"><img src="assets/renegade.jpg" alt="2018 Jeep Renegade Limited" loading="lazy" width="800" height="600"><div class="body"><h3>2018 Jeep Renegade Limited</h3><p class="miles">102,915 mi</p><div class="row"><span class="down">$[DOWN] down</span><span class="price">$10,950</span></div><a class="btn btn-outline" href="#apply">I want this one</a></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="bring" class="dark">
+  <div class="wrap pad two">
+    <div class="panel">
+      <p class="eyebrow on-dark">Save a trip</p>
+      <h2>What to bring</h2>
+      <ul>
+        <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4A9EFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Valid driver's license</li>
+        <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4A9EFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Recent pay stubs or proof of income</li>
+        <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4A9EFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Proof of address — a utility bill works</li>
+        <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4A9EFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>A few personal references</li>
+        <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4A9EFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Your down payment</li>
+      </ul>
+      <p>Have these ready and your visit goes faster.</p>
+    </div>
+    <div class="panel" id="pay">
+      <p class="eyebrow on-dark">Already a customer?</p>
+      <h2>Payments that match your payday</h2>
+      <p>Weekly, every two weeks, or monthly — we set your due date around when you get paid.</p>
+      <div class="ways">
+        <div><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#4A9EFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>Online</div>
+        <div><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#4A9EFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.8 2z"/></svg>By phone</div>
+        <div><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#4A9EFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M10 21v-6h4v6"/></svg>In person</div>
+      </div>
+      <a class="btn btn-sky" href="#pay" style="align-self: flex-start">Make a payment</a>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="soft">
+  <div class="wrap pad reviews">
+    <div class="score">
+      <p class="eyebrow">Real Google reviews</p>
+      <span class="big">4.6</span>
+      <span class="stars" role="img" aria-label="4.6 out of 5 stars">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="#FBBC04" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="#FBBC04" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="#FBBC04" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="#FBBC04" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="#FBBC04" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+      </span>
+      <span style="font-size: 16px; color: var(--ink-soft)">111 reviews on Google</span>
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=Mercer+Motor+Company+Seguin+TX" style="font-weight: 700; font-size: 16px; min-height: 44px; display: inline-flex; align-items: center">Read all reviews →</a>
+    </div>
+    <div class="quotes">
+      <figure class="q"><blockquote>"GREAT dealership!! Richie really cares about his customers!"</blockquote><figcaption>Heather M. · Google review</figcaption></figure>
+      <figure class="q"><blockquote>"Richie was amazing! This is my second time using Mercer Motors."</blockquote><figcaption>Kasi H. · Google review</figcaption></figure>
+      <figure class="q"><blockquote>"We drove 350 miles to go pick up a car for my son!"</blockquote><figcaption>Bernd D. · Google review</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap pad two">
+    <div class="visit-info">
+      <p class="eyebrow">Come see us</p>
+      <h2 class="h2">Right here on Kingsbury</h2>
+      <div class="lines">
+        <div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#003173" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><span>1224 E Kingsbury St<br>Seguin, TX 78155</span></div>
+        <div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#003173" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>Mon – Fri: 9 AM – 6 PM<br>Saturday: 9 AM – 1 PM</span></div>
+        <div style="align-items: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#003173" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.8 2z"/></svg><a href="tel:+18304915216" style="font-weight: 700; color: var(--navy)">(830) 491-5216</a></div>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px">
+        <a class="btn btn-navy" href="https://www.google.com/maps/search/?api=1&amp;query=1224+E+Kingsbury+St+Seguin+TX+78155">Get directions</a>
+        <a class="btn btn-outline" href="tel:+18304915216">Call us</a>
+      </div>
+    </div>
+    <div class="visit-photo"><img src="assets/storefront.jpg" alt="Mercer Motor Company building with the navy MM awning on Kingsbury St"></div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="top">
+      <span style="display: flex; flex-direction: column; line-height: 1.1"><span style="font-weight: 900; font-size: 18px; color: #fff">MERCER MOTOR COMPANY</span><span style="font-weight: 800; font-size: 12px; color: var(--sky-light); letter-spacing: 0.04em">WE MAKE IT EASY!</span></span>
+      <span>1224 E Kingsbury St, Seguin, TX 78155 · <a href="tel:+18304915216">(830) 491-5216</a></span>
+    </div>
+    <p>Financing subject to approval. [Add APR and term disclosures here before showing any payment or down-payment amounts.]</p>
+    <p>Concept preview — not the official Mercer Motor Company website. © Mercer Motor Company</p>
+  </div>
+</footer>
+
+<nav class="mbar" aria-label="Quick actions">
+  <a href="tel:+18304915216"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.8 2z"/></svg>Call</a>
+  <a href="sms:+18304915216"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Text</a>
+  <a href="#apply" class="apply-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Apply</a>
+</nav>
+
+<script>
+(function () {
+  // BANT, reordered for car buyers: Need -> Timing -> Budget -> Authority, then contact info last.
+  // Demo only: nothing is sent anywhere. Wire submit() to a CRM / SMS tool before going live.
+  var steps = [
+    { key: 'need', q: 'What do you need to drive?', options: ['Car', 'SUV', 'Truck', 'Van or minivan'] },
+    { key: 'timing', q: 'When do you need it?', options: ['Today', 'This week', 'This month', 'Just looking for now'] },
+    { key: 'down', q: 'About how much can you put down?', options: ['Under $1,000', '$1,000 to $2,000', '$2,000 to $3,000', '$3,000 or more'] },
+    { key: 'who', q: 'Who will sign for the vehicle?', options: ['Just me (I have a Texas license)', 'Me and a co-buyer', "I'm helping someone else buy", "I don't have a license yet"] }
+  ];
+  var state = { step: 0, answers: {} };
+  var $ = function (id) { return document.getElementById(id); };
+  var arrow = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4A5878" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>';
+  var tick = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#003173" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>';
+
+  function render() {
+    var s = state.step;
+    var shown = Math.min(s + 1, 5);
+    $('stepNum').textContent = shown;
+    $('barFill').style.width = (shown / 5 * 100) + '%';
+    $('stepperWrap').classList.toggle('hidden', s >= 5);
+    $('qView').classList.toggle('hidden', s >= 4);
+    $('contactView').classList.toggle('hidden', s !== 4);
+    $('doneView').classList.toggle('hidden', s < 5);
+    if (s < 4) {
+      var cur = steps[s];
+      $('qText').textContent = cur.q;
+      var box = $('opts');
+      box.innerHTML = '';
+      cur.options.forEach(function (label) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'opt' + (state.answers[cur.key] === label ? ' selected' : '');
+        var span = document.createElement('span');
+        span.textContent = label;
+        b.appendChild(span);
+        b.insertAdjacentHTML('beforeend', state.answers[cur.key] === label ? tick : arrow);
+        b.addEventListener('click', function () {
+          state.answers[cur.key] = label;
+          state.step = s + 1;
+          render();
+          focusCard();
+        });
+        box.appendChild(b);
+      });
+      $('backBtn').classList.toggle('hidden', s === 0);
+    }
+    if (s >= 5) {
+      $('sNeed').textContent = state.answers.need || '—';
+      $('sTiming').textContent = state.answers.timing || '—';
+      $('sDown').textContent = state.answers.down || '—';
+      $('sWho').textContent = state.answers.who || '—';
+    }
+  }
+  function focusCard() {
+    var first = document.querySelector('#apply .card :not(.hidden) > h2, #apply .card h2:not(.hidden)');
+    if (first) { first.setAttribute('tabindex', '-1'); first.focus({ preventScroll: true }); }
+  }
+  $('backBtn').addEventListener('click', function () { state.step = Math.max(0, state.step - 1); render(); });
+  $('backBtn2').addEventListener('click', function () { state.step = 3; render(); });
+  $('restartBtn').addEventListener('click', function () { state = { step: 0, answers: {} }; $('contactView').reset(); render(); });
+  $('contactView').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = $('fname').value.trim();
+    var phone = $('mphone').value.trim();
+    if (!name || phone.replace(/\D/g, '').length < 10) { $('formErr').classList.remove('hidden'); return; }
+    $('formErr').classList.add('hidden');
+    $('doneName').textContent = ', ' + name;
+    state.step = 5;
+    render();
+    focusCard();
+  });
+  render();
+})();
+</script>
+</body>
+</html>
